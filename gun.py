@@ -13,6 +13,7 @@ class Gun():
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
         self.mright = False
+        self.mleft = False
 
 
     def output(self):
@@ -21,7 +22,12 @@ class Gun():
 
     def update_gun(self):
         '''Обновление позиции пушки'''
-        if self.mright:
+        if self.mright and self.rect.right < self.screen_rect.right:  #
+            # Обновление позиции пушки для движения вправо
             self.rect.centerx += 1
+
+        elif self.mleft and self.rect.left > 0:  #
+            # Обновление позиции пушки для перемещения влево
+            self.rect.centerx -= 1
 
 
