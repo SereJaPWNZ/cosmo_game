@@ -22,3 +22,10 @@ def events(gun):
             elif event.key == pygame.K_a or event.key == pygame.K_LEFT:  #
                 # Отработка долгого зажатия кнопки влево
                 gun.mleft = False
+
+
+def update_screen(bg_color, screen, gun):
+    '''Обновление экрана'''
+    gun.update_gun()
+    gun.output()
+    pygame.display.flip()
