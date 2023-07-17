@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="" />
+    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="очищен основной файл space_game.py, часть кода перенесена в controls.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gun.py" beforeDir="false" afterPath="$PROJECT_DIR$/gun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/space_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/space_game.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,27 +23,62 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SU8DabvjNLuypJ6ALDE5N7qQ7P" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/sergey/Documents/my_game",
-    "settings.editor.selected.configurable": "Educational"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sergey/Documents/my_game&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Python.space_game">
+    <configuration name="gun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gun.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="space_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,6 +101,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.space_game" />
+        <item itemvalue="Python.gun" />
       </list>
     </recent_temporary>
   </component>
@@ -73,17 +114,102 @@
       <option name="presentableId" value="Default" />
       <updated>1689189680224</updated>
     </task>
+    <task id="LOCAL-00001" summary="Первый стабильный запуск игры">
+      <option name="closed" value="true" />
+      <created>1689191132933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689191132934</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Первый стабильный запуск игры">
+      <option name="closed" value="true" />
+      <created>1689191625115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689191625115</updated>
+    </task>
+    <task id="LOCAL-00003" summary="вынос событий в отдельный файл, добавлено изображение корабля, отредактирован размер окна игры">
+      <option name="closed" value="true" />
+      <created>1689494236292</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689494236292</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Обновлены события, проработано долгое задатие на кнопку вправо">
+      <option name="closed" value="true" />
+      <created>1689496709247</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689496709247</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавлено перемещение влево пушки">
+      <option name="closed" value="true" />
+      <created>1689505972191</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689505972191</updated>
+    </task>
+    <task id="LOCAL-00006" summary="очищен основной файл space_game.py, часть кода перенесена в controls.py">
+      <option name="closed" value="true" />
+      <created>1689506455135</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689506455136</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
+    <option name="RECENT_FILTERS">
       <map>
-        <entry key="MAIN">
+        <entry key="User">
           <value>
-            <State />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Первый стабильный запуск игры" />
+    <MESSAGE value="вынос событий в отдельный файл, добавлено изображение корабля, отредактирован размер окна игры" />
+    <MESSAGE value="Обновлены события, проработано долгое задатие на кнопку вправо" />
+    <MESSAGE value="Добавлено перемещение влево пушки" />
+    <MESSAGE value="очищен основной файл space_game.py, часть кода перенесена в controls.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="очищен основной файл space_game.py, часть кода перенесена в controls.py" />
   </component>
 </project>

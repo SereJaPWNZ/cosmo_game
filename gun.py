@@ -11,9 +11,17 @@ class Gun():
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         self.rect.centerx = self.screen_rect.centerx
+        self.center = float(self.rect.centerx)
+
+        self.center1 = float(self.rect.bottom)  # мои приколдесы
+        self.rect.centery = float(self.rect.centery)  # мои приколдесы
+
         self.rect.bottom = self.screen_rect.bottom
         self.mright = False
         self.mleft = False
+
+        self.mtop = False  # мои приколдесы
+        self.mbottom = False  # мои приколдесы
 
 
     def output(self):
@@ -24,10 +32,21 @@ class Gun():
         '''Обновление позиции пушки'''
         if self.mright and self.rect.right < self.screen_rect.right:  #
             # Обновление позиции пушки для движения вправо
-            self.rect.centerx += 1
+            self.center += 1.5
 
         elif self.mleft and self.rect.left > 0:  #
             # Обновление позиции пушки для перемещения влево
-            self.rect.centerx -= 1
+            self.center -= 1.5
 
+        elif self.mbottom and self.rect.bottom < self.screen_rect.bottom:  #
+            # Обновление позиции пушки для перемещения вниз
+            self.center1 += 1.5
+
+        elif self.mtop and self.rect.top > 0:  #
+            # Обновление позиции пушки для перемещения вверх
+            self.center1 -= 1.5
+
+
+        self.rect.centerx = self.center
+        self.rect.centery = self.center1
 

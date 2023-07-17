@@ -4,7 +4,8 @@ from gun import Gun
 def run():
 
     pygame.init()  # Инициализация pygame
-    screen = pygame.display.set_mode((700, 800))  # создание отображаемой
+    screen = pygame.display.set_mode((1920, 1080), pygame.RESIZABLE)  # создание
+    # отображаемой
     # области для нашей игры
     pygame.display.set_caption("Космические защитники")  # Вывод названия игры
     bg_color = (0, 0, 0)
