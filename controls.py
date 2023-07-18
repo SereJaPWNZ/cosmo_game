@@ -1,6 +1,7 @@
 import pygame, sys  # Обработка событий и закрытия окна
+from bullet import Bullet
 
-def events(gun):
+def events(screen, gun, bullets):
     '''Обработка событий'''
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -14,7 +15,7 @@ def events(gun):
                 # Отработка одиночного зажатия кнопки влево
                 gun.mleft = True
 
-            if event.key == pygame.K_w or event.key == pygame.K_UP:  #
+            elif event.key == pygame.K_w or event.key == pygame.K_UP:  #
                 # Отработка одиночного зажатия кнопки вправо
                 gun.mtop = True
 
@@ -22,6 +23,9 @@ def events(gun):
                 # Отработка одиночного зажатия кнопки влево
                 gun.mbottom = True
 
+            elif event.key == pygame.K_SPACE:
+                new_bullet = Bullet(screen, gun)
+                bullets.add(new_bullet)
 
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d or event.key == pygame.K_RIGHT:  #
@@ -40,8 +44,19 @@ def events(gun):
                 # Отработка долгого зажатия кнопки вниз
                 gun.mbottom = False
 
-def update_screen(bg_color, screen, gun):
+def update_screen(bg_color, screen, gun, bullets):
     '''Обновление экрана'''
     gun.update_gun()
+    for bullet in bullets.sprites():
+        bullet.draw_bullet()
     gun.output()
     pygame.display.flip()
+
+
+def update_bullets(bullets):
+    '''Обновление позиции пуль'''
+    bullets.update()
+    for bullet in bullets.copy():
+         if bullet.rect.bottom <= 0:
+              bullets.remove(bullet)
+    print(len(bullets))  # Проверка на очистку пуль при выходе за экран
