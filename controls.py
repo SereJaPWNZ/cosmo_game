@@ -44,12 +44,13 @@ def events(screen, gun, bullets):
                 # Отработка долгого зажатия кнопки вниз
                 gun.mbottom = False
 
-def update_screen(bg_color, screen, gun, bullets):
+def update_screen(bg_color, screen, gun, ino, bullets):
     '''Обновление экрана'''
     gun.update_gun()
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     gun.output()
+    ino.drow()
     pygame.display.flip()
 
 
@@ -59,4 +60,5 @@ def update_bullets(bullets):
     for bullet in bullets.copy():
          if bullet.rect.bottom <= 0:
               bullets.remove(bullet)
-    print(len(bullets))  # Проверка на очистку пуль при выходе за экран
+    # print(len(bullets))  # Проверка на очистку пуль при выходе за экран
+

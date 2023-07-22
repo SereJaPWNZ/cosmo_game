@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="добавил перемещение вверх и вниз">
-      <change afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
+    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="Добавлен файл с пулей, осуществлена привязка пули к кораблю,">
+      <change afterPath="$PROJECT_DIR$/images/ino.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ino.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Gun.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Gun.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/space_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/space_game.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689624037408</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавлен файл с пулей, осуществлена привязка пули к кораблю,">
+      <option name="closed" value="true" />
+      <created>1689708042218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689708042218</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +228,7 @@
     <MESSAGE value="Добавлено перемещение влево пушки" />
     <MESSAGE value="очищен основной файл space_game.py, часть кода перенесена в controls.py" />
     <MESSAGE value="добавил перемещение вверх и вниз" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил перемещение вверх и вниз" />
+    <MESSAGE value="Добавлен файл с пулей, осуществлена привязка пули к кораблю," />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен файл с пулей, осуществлена привязка пули к кораблю," />
   </component>
 </project>
