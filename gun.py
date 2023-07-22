@@ -13,8 +13,9 @@ class Gun():
         self.rect.centerx = self.screen_rect.centerx
         self.center = float(self.rect.centerx)
 
-        self.center1 = float(self.rect.bottom)  # мои приколдесы
-        self.rect.centery = float(self.rect.centery)  # мои приколдесы
+        self.rect.centery = self.screen_rect.bottom - 64  # мои приколдесы
+        # цифра равна половине размера картинки пушки
+        self.center1 = float(self.rect.centery)  # мои приколдесы
 
         self.rect.bottom = self.screen_rect.bottom
         self.mright = False

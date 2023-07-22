@@ -15,6 +15,12 @@ class Ino(pygame.sprite.Sprite):
         self.x = float(self.rect.x)
         self.y = float(self.rect.y)
 
-    def drow(self):
+    def draw(self):
         '''вывод пришельца на экран'''
         self.screen.blit(self.image, self.rect)
+
+
+    def update(self):
+        '''перемещение вниз инопланетян'''
+        self.y += 0.1
+        self.rect.y = self.y
