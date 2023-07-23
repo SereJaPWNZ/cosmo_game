@@ -1,6 +1,8 @@
 import pygame, sys # Обработка событий и закрытия окна
 from bullet import Bullet
 from ino import Ino
+import time
+
 
 def events(screen, gun, bullets):
     '''Обработка событий'''
@@ -55,18 +57,44 @@ def update_screen(bg_color, screen, gun, inos, bullets):
     pygame.display.flip()
 
 
-def update_bullets(bullets):
+def update_bullets(screen, inos, bullets):
     '''Обновление позиции пуль'''
     bullets.update()
     for bullet in bullets.copy():
          if bullet.rect.bottom <= 0:
               bullets.remove(bullet)
     # print(len(bullets))  # Проверка на очистку пуль при выходе за экран
+    collisions = pygame.sprite.groupcollide(bullets, inos, True, True)
+    if len(inos) == 0:
+        bullets.empty()
+        create_army(screen, inos)
 
 
-def update_inos(inos):
+def gun_kill(stats, screen, gun, inos, bullets):
+    '''столкновение пушки и армии'''
+    stats.guns_left -= 1
+    inos.empty()
+    bullets.empty()
+    create_army(screen, inos)
+    gun.create_gun()
+    time.sleep(2)
+
+
+def update_inos(stats, screen, gun, inos, bullets ):
     '''обновляет позицию пришельцев'''
     inos.update()
+    if pygame.sprite.spritecollideany(gun, inos):
+        gun_kill(stats, screen, gun, inos, bullets)
+    inos_check(stats, screen, gun, inos, bullets)
+
+
+def inos_check(stats, screen, gun, inos, bullets):
+    '''проверка, добралась ли армия до края экрана'''
+    screen_rect = screen.get_rect()
+    for ino in inos.sprites():
+        if ino.rect.bottom >= screen_rect.bottom:
+            gun_kill(stats, screen, gun, inos, bullets)
+            break
 
 
 def create_army(screen , inos):
@@ -75,7 +103,7 @@ def create_army(screen , inos):
     ino_width = ino.rect.width
     number_ino_x = int((800 - 2 * ino_width) / ino_width)
     ino_height = ino.rect.height
-    number_ino_y = int((800 - 128 - 2 * ino_height) / ino_height)
+    number_ino_y = int((800 - 125 - 2 * ino_height) / ino_height)
 
 
     for row_number in range(number_ino_y):
