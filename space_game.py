@@ -24,9 +24,10 @@ def run():
 
     while True:
         controls.events(screen, gun, bullets )
-        screen.fill(bg_color)
-        controls.update_screen(bg_color, screen, gun, inos, bullets)
-        controls.update_bullets(screen, inos, bullets)
-        controls.update_inos(stats, screen, gun, inos, bullets)
+        if stats.run_game == True:
+            screen.fill(bg_color)
+            controls.update_screen(bg_color, screen, gun, inos, bullets)
+            controls.update_bullets(screen, inos, bullets)
+            controls.update_inos(stats, screen, gun, inos, bullets)
 
 run()
