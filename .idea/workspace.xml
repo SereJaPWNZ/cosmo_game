@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="Добавлен выход из игры при отсутсвии жизней">
-      <change afterPath="$PROJECT_DIR$/high_score.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scores.py" afterDir="false" />
+    <list default="true" id="6e34f0ab-ad90-4c4e-93cd-b19e9a0411f7" name="Changes" comment="Добавлен вывод статистики максимального результата во внешний файл">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bullet.py" beforeDir="false" afterPath="$PROJECT_DIR$/bullet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gun.py" beforeDir="false" afterPath="$PROJECT_DIR$/gun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scores.py" beforeDir="false" afterPath="$PROJECT_DIR$/scores.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/space_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/space_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/stats.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690648968540</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавлен вывод статистики максимального результата во внешний файл">
+      <option name="closed" value="true" />
+      <created>1690653563141</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690653563141</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +273,7 @@
     <MESSAGE value="Добавлена группа инопланетных кораблей, а также реализовано смещение инопланетных кораблей вниз" />
     <MESSAGE value="Добавлен сброс игры, обновление после смерти, увеличена скорость перемещения пули" />
     <MESSAGE value="Добавлен выход из игры при отсутсвии жизней" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен выход из игры при отсутсвии жизней" />
+    <MESSAGE value="Добавлен вывод статистики максимального результата во внешний файл" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен вывод статистики максимального результата во внешний файл" />
   </component>
 </project>
