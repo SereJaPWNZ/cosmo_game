@@ -47,9 +47,11 @@ def events(screen, gun, bullets):
                 # Отработка долгого зажатия кнопки вниз
                 gun.mbottom = False
 
-def update_screen(bg_color, screen, gun, inos, bullets):
+def update_screen(bg_color, screen, stats, sc, gun, inos, bullets):
     '''Обновление экрана'''
+    # screen.feel(bg_color)
     gun.update_gun()
+    sc.show_score()
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     gun.output()
@@ -57,7 +59,7 @@ def update_screen(bg_color, screen, gun, inos, bullets):
     pygame.display.flip()
 
 
-def update_bullets(screen, inos, bullets):
+def update_bullets(screen, stats, sc, inos, bullets):
     '''Обновление позиции пуль'''
     bullets.update()
     for bullet in bullets.copy():
@@ -65,6 +67,11 @@ def update_bullets(screen, inos, bullets):
               bullets.remove(bullet)
     # print(len(bullets))  # Проверка на очистку пуль при выходе за экран
     collisions = pygame.sprite.groupcollide(bullets, inos, True, True)
+    if collisions:
+        for inos in collisions.values():
+            stats.score += 10 * len(inos)
+        sc.image_score()
+        check_higt_score(stats, sc)
     if len(inos) == 0:
         bullets.empty()
         create_army(screen, inos)
@@ -117,3 +124,11 @@ def create_army(screen , inos):
             ino.rect.x = ino.x
             ino.rect.y = ino.rect.height + ino.rect.height * row_number
             inos.add(ino)
+
+def check_higt_score(stats, sc):
+    '''проверка рекорда'''
+    if stats.score > stats.high_score:
+        stats.high_score = stats.score
+        sc.image_high_score()
+        with open('high_score.txt', 'w') as f:
+            f.write(str(stats.high_score))

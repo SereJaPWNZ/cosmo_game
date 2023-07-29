@@ -6,7 +6,7 @@ class Bullet(pygame.sprite.Sprite):
         '''создаем пулю в позиции пушки'''
         super(Bullet, self).__init__()
         self.screen = screen
-        self.rect = pygame.Rect(0, 0, 2, 12)
+        self.rect = pygame.Rect(0, 0, 200, 8)
         self.color = 139, 195, 74
         self.speed = 4.0
         self.rect.centerx = gun.rect.centerx
